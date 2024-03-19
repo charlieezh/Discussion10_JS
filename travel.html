@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" >
+    <link rel="stylesheet" href="css/style.css" >
+        <script type="text/javascript">
+        function displayInformation () {
+            // Your code goes here. 
+            // Do not change any other code in this file
+            // All of the steps below must be achieved using JavaScript!
+    
+            
+            // 1. Change the h1 element to your name.
+            document.querySelector('h1').innerHTML = "Charlie's Travel spots"
+               
+            // 2. Update the three span elements using ONLY JavaScript
+            document.querySelector('#URL').innerHTML = document.URL
+            document.getElementById('URL').innerHTML = document.URL
+            document.querySelector('#time').innerHTML = new Date()
+            document.querySelector('#items').innerHTML = document.querySelectorAll('h2').length;
+            // 3. Change the background color and margin for the entire page.
+            document.body.style.backgroundColor = "lightyellow";
+            document.body.style.margin = "0";
+                
+        }
+    
+        // 4. If someone uses the keyboard shortcut to copy the words "Thank you for visiting!" then add the words "Go Blue" to the final div.  
+        // Each occurrence should be on a separate line.  Don't use 
+        // paragraphs. 
+        function copyFunction(){
+            document.querySelector("#cheer").innerHTML += "<br>GoBlue!\n"
+        }
+                   
+    </script>
+
+    <title>Travel</title>
+</head>
+<body>
+    <header>
+        <a href = "#main" class="skip">Skip to Main Content</a>
+        <nav>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "pets.html">Pets</a></li>
+                <li class="current-page"><a href = "travel.html">Travel</a></li>
+                <li><a href = "recipes.html">Recipes</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main id="main">
+        <h1>Travel</h1>
+        <div>
+            <h2>Use JavaScript to display the following information here:</h2>
+	        <p>
+                The URL of this page is: <span id = "URL"></span><br/>
+                The number of H2 items for this page: <span id = "items"></span><br/>
+                The current date/time is: <span id = "time"></span><br/>
+            </p>
+
+		    <p oncopy="copyFunction()">Thank you for visiting!</p>
+
+	        
+            <div id="cheer"></div>
+        </div>
+
+        <div>
+            <h2>Yellowstone</h2>
+            <img class="big-pic" src="images/yellowstone_sunset.jpg" width = "400" alt="This is the main pic of yellowstone">
+
+            <p tabindex="0">Yellowstone National Park, established in 1872, is a renowned natural reserve located primarily in Wyoming, with parts extending into Montana and Idaho. It is famed for its wildlife and its many geothermal features, notably Old Faithful geyser.</p> 
+            <h3>Photo Gallery</h3>
+            <div class="yellowstone-photo">
+            <img src="images/yellowstone_travertine.JPG" width ="200" alt = "These features are formed over centuries by the deposition of minerals from hot spring water">
+            <img src="images/yellowstone_sulphur_springs.JPG"  width ="200" alt="the park's volatile underground volcanic activity">
+            <img src="images/yellowstone_cauldron.jpg"  width ="200" alt="This is another pic of yellowstone">
+            <img src="images/yellowstone_saved.jpg"  width ="200" alt="This is another pic which I saved of yellowstone">
+            </div>
+            <h3>Features</h3>
+            <ul class="lists">
+                <li>Tall</li>
+                <li>Big</li>
+                <li>Well-known across the world</li>
+            </ul>
+            <!-- Jackie Wolf -->
+        
+        </div>
+        <div>
+            <h2>The Great Wall</h2>
+            <img class="big-pic" src="images/the_great_wall.jpeg" width = "400" alt="This is the Great Wall">
+            <p tabindex="0">This is the stunning view from the Great Wall of China!</p>
+        </div>
+        <div>
+            <h2>Hollywood</h2>
+            <img class="big-pic" src="images/hollywood_sign.jpeg" width = "400" alt="This is the Hollywood Sign">
+            <p tabindex="0">
+                If you like LA, you should definitely check out the Hollywood Sign!
+            </p></div>
+        <div></div>
+        <div></div>
+    </main>
+    
+</body>
+</html>
